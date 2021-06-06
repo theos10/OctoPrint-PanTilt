@@ -2,7 +2,7 @@
 
 Provides support for controlling two servos using GPIO so a pan tilt camera can be controlled.
 
-Based on https://github.com/Salandora/OctoPrint-PanTilt, but instead of calling a script it directly controls servos via GPIO pins. I also fixed a couple of issues that I had with the original and changed some parts I disliked.
+Based on https://github.com/antonhensen81/OctoPrint-PanTilt, but instead of calling a script it directly controls servos via GPIO pins. I also fixed a couple of issues that I had with the original and changed some parts I disliked.
 
 I used this [3D Print](https://www.thingiverse.com/thing:708819), but you can use any design that uses two servos.
 
@@ -15,7 +15,7 @@ Click the image below for a short demo.
 ## Wiring
 
 The default wiring is shown below, it shows how the two servos can be connected to the Raspberry Pi (Model3). 
-The GPIO ports used in this example match the default configuration of GPIO ports 12 and 17.
+The GPIO ports used in this example match the default configuration of GPIO ports 12 and 13.
 Other scenarios are possible and GPIO pins can be configured to be what you like (see [Configuration](#Configuration)).
 
 ![Wiring](https://raw.githubusercontent.com/theos10/OctoPrint-PanTilt/master/images/wiring.png)

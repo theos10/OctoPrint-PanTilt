@@ -3,7 +3,7 @@
 plugin_identifier = "octo_pantiltcamera"
 plugin_package = "octoprint_octo_pantiltcamera"
 plugin_name = "OctoPrint Pan Tilt Camera"
-plugin_version = "0.2.1"
+plugin_version = "0.2.2"
 plugin_description = "Drive two servos for a pan tilt camera"
 plugin_author = "Anton Hensen Feat. FOURNIER Ghislain."
 plugin_author_email = ""
