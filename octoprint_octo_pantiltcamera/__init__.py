@@ -43,7 +43,7 @@ class Octo_pantiltcameraPlugin(octoprint.plugin.SettingsPlugin,
 				initialValue=30,
 				minValue=0,
 				maxValue=50,
-				gpio=17,
+				gpio=12,
 				invert=True
 			),
 			tilt=dict(
@@ -51,7 +51,7 @@ class Octo_pantiltcameraPlugin(octoprint.plugin.SettingsPlugin,
 				initialValue=95,
 				minValue=50,
 				maxValue=120,
-				gpio=18,
+				gpio=13,
 				invert=False,
 			),
 		)
@@ -65,17 +65,17 @@ class Octo_pantiltcameraPlugin(octoprint.plugin.SettingsPlugin,
 		pwm.stop()
 
 	def limitValues(self, panValue, tiltValue):
-		self.panValue = min(panValue, int(self._settings.get(["pan", "maxValue"])))
-		self.panValue = max(self.panValue, int(self._settings.get(["pan", "minValue"])))
-		self.tiltValue = min(tiltValue, int(self._settings.get(["tilt", "maxValue"])))
-		self.tiltValue = max(self.tiltValue, int(self._settings.get(["tilt", "minValue"])))
+                self.panValue = min(panValue, int(self._settings.get(["pan", "maxValue"])))
+                self.panValue = max(self.panValue, int(self._settings.get(["pan", "minValue"])))
+                self.tiltValue = min(tiltValue, int(self._settings.get(["tilt", "maxValue"])))
+                self.tiltValue = max(self.tiltValue, int(self._settings.get(["tilt", "minValue"])))
 
 	def setAngles(self, panValue, tiltValue):
- 		self.limitValues(panValue, tiltValue);
- 		self._logger.info("pan: {}".format(self.panValue))
-		self._logger.info("tilt: {}".format(self.tiltValue))
-		self.setServoAngle(self.panPort, self.panValue)
-		self.setServoAngle(self.tiltPort, self.tiltValue)
+                self.limitValues(panValue, tiltValue);
+                self._logger.info("pan: {}".format(self.panValue))
+                self._logger.info("tilt: {}".format(self.tiltValue))
+                self.setServoAngle(self.panPort, self.panValue)
+                self.setServoAngle(self.tiltPort, self.tiltValue)
 
 	def get_assets(self):
 		return dict(
@@ -141,11 +141,12 @@ class Octo_pantiltcameraPlugin(octoprint.plugin.SettingsPlugin,
 				current=self._plugin_version,
 
 				# update method: pip
-				pip="https://github.com/antonhensen81/OctoPrint-PanTilt/archive/{target_version}.zip"
+				pip="https://github.com/theos10/OctoPrint-PanTilt/archive/{target_version}.zip"
 			)
 		)
 
 __plugin_name__ = "OctoPrint Pan Tilt Camera"
+__plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
 	global __plugin_implementation__
