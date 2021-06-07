@@ -10,9 +10,9 @@ license: AGPLv3
 # TODO
 date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
 
-homepage: https://github.com/antonhensen81/OctoPrint Pan Tilt Camera
-source: https://github.com/antonhensen81/OctoPrint Pan Tilt Camera
-archive: https://github.com/antonhensen81/OctoPrint Pan Tilt Camera/archive/master.zip
+homepage: https://github.com/theos10/OctoPrint Pan Tilt Camera
+source: https://github.com/theos10/OctoPrint Pan Tilt Camera
+archive: https://github.com/theos10/OctoPrint Pan Tilt Camera/archive/master.zip
 
 # TODO
 # Set this to true if your plugin uses the dependency_links setup parameter to include
@@ -92,7 +92,7 @@ compatibility:
   # If your plugin only supports Python 2 (worst case, not recommended for newly developed plugins since Python 2
   # is EOL), leave at ">=2.7,<3"
   
-  python: ">=2.7,<3"
+  python: ">=2.7,<4"
 
 ---
 
